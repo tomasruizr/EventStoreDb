@@ -4,8 +4,6 @@
 	"name": "C++",
 	"build": {
 		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick an Debian OS version: buster, stretch
-		"args": { "VARIANT": "buster" }
 	},
 	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
 
@@ -16,7 +14,24 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"ms-vscode.cpptools"
+		"ms-vscode.cpptools",
+		"ms-vscode.cpptools",
+		"jeff-hykin.better-cpp-syntax",
+		"esbenp.prettier-vscode",
+		"coenraads.bracket-pair-colorizer",
+		"twxs.cmake",
+		"ms-vscode.cmake-tools",
+		"softwaredotcom.swdc-vscode",
+		"patbenatar.advanced-new-file",
+		"alefragnani.bookmarks",
+		"ms-azuretools.vscode-docker",
+		"sleistner.vscode-fileutils",
+		"mhutchie.git-graph",
+		"eamodio.gitlens",
+		"ms-vsliveshare.vsliveshare",
+		"fabiospampinato.vscode-todo-plus",
+		"fredericbonnet.cmake-test-adapter",
+		"hbenl.vscode-test-explorer"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
