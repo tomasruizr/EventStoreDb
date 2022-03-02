@@ -2,6 +2,3 @@
 	path = googletest
 	url = https://github.com/google/googletest.git
 
-[submodule "threadpool"]
-	path = threadpool
-	url = https://github.com/tomasruizr/thread_pool_cpp17.git
