@@ -15,7 +15,6 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"ms-vscode.cpptools",
-		"ms-vscode.cpptools",
 		"jeff-hykin.better-cpp-syntax",
 		"esbenp.prettier-vscode",
 		"coenraads.bracket-pair-colorizer",
@@ -28,7 +27,6 @@
 		"sleistner.vscode-fileutils",
 		"mhutchie.git-graph",
 		"eamodio.gitlens",
-		"ms-vsliveshare.vsliveshare",
 		"fabiospampinato.vscode-todo-plus",
 		"fredericbonnet.cmake-test-adapter",
 		"hbenl.vscode-test-explorer"
