@@ -64,7 +64,6 @@ set(Sources
   Grpc/serverfeatures.grpc.pb.cc
   Grpc/status.grpc.pb.cc
   # Grpc/users.grpc.pb.cc
-  main.cpp
 )
 
 # add_executable(${This} ${Sources} ${Headers})
