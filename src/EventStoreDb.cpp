@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void EventStoreDb::connect(){
+void EventStoreDb::connect(string address){
 	channel = grpc::CreateChannel(address, grpc::InsecureChannelCredentials());
 	if (!channel->WaitForConnected(gpr_time_add(
 			gpr_now(GPR_CLOCK_REALTIME),

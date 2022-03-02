@@ -7,8 +7,8 @@
 using namespace std;
 
 TEST(AppendToStreamTest, Works) {
-  unique_ptr<EventStoreDb> event_store = make_unique<EventStoreDb>("docker.for.mac.localhost:2113");
-  event_store->connect();
+  unique_ptr<EventStoreDb> event_store = make_unique<EventStoreDb>();
+  event_store->connect("docker.for.mac.localhost:2113");
   event_store->append_to_stream("some-stream-from-test", vector<Event>{Event("AddLastName", "{\"lastName\":\"ruiz\"}")});
   EXPECT_TRUE(true);
 } 

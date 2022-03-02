@@ -17,10 +17,9 @@ class EventStoreDb
 {
 private:
 	std::shared_ptr<grpc_impl::Channel> channel;
-	string address;
 public:
-	EventStoreDb(string _address): address(_address){};
-	void connect();
+	EventStoreDb() = default;
+	void connect(string _address);
 	void append_to_stream(string stream, vector<Event> events);
 
 	// template<class UnaryFunction>
