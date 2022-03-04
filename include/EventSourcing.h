@@ -1,3 +1,4 @@
+#pragma once
 #ifndef EVENTSOURCING
 #define EVENTSOURCING
 using namespace std;

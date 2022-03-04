@@ -1,8 +1,7 @@
 # See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.134.0/containers/cpp/.devcontainer/base.Dockerfile
 ARG VARIANT="bullseye"
+FROM --platform=linux/x86_64 mcr.microsoft.com/vscode/devcontainers/cpp:dev-${VARIANT}
 # FROM --platform=linux/arm64 mcr.microsoft.com/vscode/devcontainers/cpp:0-${VARIANT}
-# FROM --platform=aarch64/arm64 mcr.microsoft.com/vscode/devcontainers/cpp:dev-${VARIANT}
-FROM --platform=linux/arm64 mcr.microsoft.com/vscode/devcontainers/cpp:dev-${VARIANT}
 
 # [Optional] Uncomment this section to install additional packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
@@ -24,8 +23,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         uuid-dev \
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
-# RUN wget https://github.com/Kitware/CMake/releases/download/v3.22.2/cmake-3.22.2-Linux-x86_64.sh \
-RUN wget https://github.com/Kitware/CMake/releases/download/v3.22.2/cmake-3.22.2-Linux-aarch64.sh \
+RUN wget https://github.com/Kitware/CMake/releases/download/v3.22.2/cmake-3.22.2-Linux-x86_64.sh \
+# RUN wget https://github.com/Kitware/CMake/releases/download/v3.22.2/cmake-3.22.2-Linux-aarch64.sh \
       -q -O /tmp/cmake-install.sh \
       && chmod u+x /tmp/cmake-install.sh \
       && mkdir /usr/bin/cmake \
