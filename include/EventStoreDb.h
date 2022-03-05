@@ -1,3 +1,4 @@
+#pragma once
 #ifndef EVENTSTOREDB
 #define EVENTSTOREDB
 #include <iostream>
