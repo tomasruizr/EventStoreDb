@@ -30,7 +30,7 @@ void EventStoreDb::append_to_stream(string stream, vector<Event> events){
 
 	for (auto m : events){
 		std::string id = uuid();
-		cout << "the ID: " << id << "\n";
+		// cout << "the ID: " << id << "\n";
 		event_store::client::streams::AppendReq req;
 		auto message1 = req.mutable_proposed_message();
 		message1->set_data(m.data);
@@ -40,7 +40,7 @@ void EventStoreDb::append_to_stream(string stream, vector<Event> events){
 		map["$correlationId"] = id;
 		message1->mutable_id()->set_string(id);
 		request->Write(req);
-		cout << "Event created with id: " << id << "\n";
+		// cout << "Event created with id: " << id << "\n";
 	}
 	request->WritesDone();
 	auto status = request->Finish();
@@ -50,7 +50,7 @@ void EventStoreDb::append_to_stream(string stream, vector<Event> events){
 			cout << "Error details: " << status.error_details() << "\n";
 	}
 	else {
-			cout << "Events created successfuly\n";
+			// cout << "Events created successfuly\n";
 	}
 }
 
@@ -75,9 +75,6 @@ void EventStoreDb::read_stream(string stream, function<void (Event)> onEvent){
 			auto data = msg.event().event().data();
 			auto metadata = msg.event().event().metadata();
 			onEvent(Event(metadata.at("type"), data, msg.event().event().stream_revision()));
-			cout << "LA DATA: " << data << "\n"; 
-			cout << "Event Name: " << metadata.at("type") << "\n"; 
-			cout << "Revision: " << msg.event().event().stream_revision() << "\n"; 
 	}
 	req_tal->Finish();
 }

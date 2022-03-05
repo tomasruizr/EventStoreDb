@@ -68,7 +68,7 @@ set(Sources
 
 # add_executable(${This} ${Sources} ${Headers})
 add_library(${This} STATIC ${Sources} ${Headers})
-link_libraries("-static")
+# link_libraries("-static")
 target_include_directories(${This} PUBLIC include)
 
 # TESTS

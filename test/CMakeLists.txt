@@ -3,6 +3,7 @@ set(This EventStoreDbTest)
 
 set(Sources
   append_to_stream_test.cpp
+  read_stream_test.cpp
 )
 
 add_executable(${This} ${Sources})
